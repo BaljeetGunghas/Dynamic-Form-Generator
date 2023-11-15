@@ -1,0 +1,81 @@
+.formFields {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  align-items: center;
+
+  .FormInputSec {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+
+    label {
+      font-weight: 500;
+      color: #000000;
+      font-size: 14px;
+      line-height: 22px;
+      .required {
+        color: red;
+        font-weight: bold;
+      }
+    }
+
+    
+
+    select,
+    textarea,
+    input {
+      padding: 0.4rem 1rem;
+      border: 1px solid #d8dadc;
+      border-radius: 10px;
+      outline: none;
+      color: #0000004d;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+  }
+  .optionsListSec {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .DeleteButton {
+    border: none;
+    background-color: transparent;
+    padding: 0%;
+    height: fit-content;
+    height: 25px;
+
+    svg {
+      height: 25px;
+      width: 25px;
+      color: #952c42;
+      margin: 0%;
+      cursor: pointer;
+    }
+  }
+}
+
+.error {
+  font-size: 12px;
+  color: #952c42;
+  font-weight: 500;
+  margin: 0%;
+  padding: 0.1rem 0.5rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .formFields {
+    width: -webkit-fill-available;
+  }
+}
