@@ -227,3 +227,10 @@
     transform: rotate(0deg);
   }
 }
+
+
+@media only screen and (max-width: 676px) {
+  .main {
+    padding: 2rem;
+  }
+}
