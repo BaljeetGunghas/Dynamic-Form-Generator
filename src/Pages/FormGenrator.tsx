@@ -83,19 +83,20 @@ const FormGenerator: React.FC = () => {
                     <FormField
                         key={field.id}
                         field={field}
-                        onChange={(e) => {
-                            // Manually handle Checkbox and Radio changes
-                            if (field.type === 'Checkbox' || field.type === 'Radio') {
-                                const updatedValue = e.target.type === 'Checkbox' ? e.target.type : e.target.value;
-                                setFormFields((prevFields) =>
-                                    prevFields.map((prevField) =>
-                                        prevField.id === field.id ? { ...prevField, value: updatedValue } : prevField
-                                    )
-                                );
-                            } else {
-                                formik.handleChange(e);
-                            }
-                        }}
+                        // onChange={(e) => {
+                        //     // Manually handle Checkbox and Radio changes
+                        //     if (field.type === 'Checkbox' || field.type === 'Radio',field.type === 'Dropdown') {
+                        //         const updatedValue =  e.target.type;
+                        //         setFormFields((prevFields) =>
+                        //             prevFields.map((prevField) =>
+                        //                 prevField.id === field.id ? { ...prevField, value: updatedValue } : prevField
+                        //             )
+                        //         );
+                        //     } else {
+                        //         formik.handleChange(e);
+                        //     }
+                        // }}
+                        onChange={(e)=> formik.handleChange(e)}
                         onDelete={deleteFormField}
                     />
                 ))}

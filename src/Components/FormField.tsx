@@ -10,7 +10,6 @@ import { FormFieldProps } from './FormFieldProps';
 const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaultValue }) => {
 
     const handleFieldChange = (e: any) => {
-
         onChange(e)
     };
 
@@ -28,6 +27,7 @@ const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaul
                         value={defaultValue?.fieldId}
                         name={fieldId}
                         onChange={handleFieldChange}
+                        required={field.required}
                     />
                 );
             case 'Textarea':
@@ -39,6 +39,7 @@ const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaul
                         name={fieldId}
                         onChange={handleFieldChange}
                         value={defaultValue?.fieldId}
+                        required={field.required}
                     />
                 );
             case 'Dropdown':
@@ -47,7 +48,7 @@ const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaul
                         value={defaultValue?.fieldId}
                         name={fieldId}
                         onChange={handleFieldChange}
-
+                        required={field.required}
                     >
                         <option value="" disabled>Select an option</option>
                         {field.options?.map((option) => (
@@ -69,6 +70,7 @@ const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaul
                                     name={fieldId}
                                     onChange={handleFieldChange}
                                     value={defaultValue?.fieldId}
+                                    required={field.required}
                                 />
                                 <label htmlFor={option}>{option}</label>
                             </div>
@@ -87,6 +89,7 @@ const FormField: React.FC<FormFieldProps> = ({ field, onChange, onDelete, defaul
                                     name={fieldId}
                                     onChange={handleFieldChange}
                                     value={defaultValue?.fieldId}
+                                    required={field.required}
                                 />
                                 <label htmlFor={option}>{option}</label>
                             </div>
